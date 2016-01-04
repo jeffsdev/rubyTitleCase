@@ -11,4 +11,7 @@ describe('String#title_case') do
   it("does not capitalize designated words (prepositions, conjunctions, etc)") do
     expect(("beowulf from brighton beach").title_case()).to(eq("Beowulf from Brighton Beach"))
   end
+  it("capitalizes designated words if they are the first word") do
+    expect(("from beowulf to the hulk").title_case()).to(eq("From Beowulf to the Hulk"))
+  end
 end
